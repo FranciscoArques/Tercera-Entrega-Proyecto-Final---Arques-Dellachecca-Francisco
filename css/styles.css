@@ -17,12 +17,9 @@ con las variables, mixins y maps. */
 
 @media screen and (max-width: 577px) {
   .imagenDeFondo {
-    background-image: url(../img/imgDeFondoResponsive.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../img/imgDeFondoResponsive.jpg);
     margin-bottom: 0%;
-    padding-bottom: 0%;
-    background-attachment: fixed; } }
+    padding-bottom: 0%; } }
 
 /* MENÚ DE NAVEGACIÓN (con modificaciones para que funcione con bootstrap)*/
 .newNav {
