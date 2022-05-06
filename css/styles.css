@@ -1,0 +1,770 @@
+@charset "UTF-8";
+/* Importamos en primera instancia el archivo
+con las variables, mixins y maps. */
+/* GENERAL (APLICA PARA TODO EL SITIO) */
+* {
+  margin: 0%;
+  padding: 0%; }
+
+@media screen and (min-width: 577px) {
+  .imagenDeFondo {
+    background-image: url(../img/imgDeFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    background-attachment: fixed; } }
+
+@media screen and (max-width: 577px) {
+  .imagenDeFondo {
+    background-image: url(../img/imgDeFondoResponsive.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    background-attachment: fixed; } }
+
+/* MENÚ DE NAVEGACIÓN (con modificaciones para que funcione con bootstrap)*/
+.newNav {
+  display: flex;
+  display: block;
+  position: sticky;
+  top: 0%;
+  border-bottom: #000 3px solid;
+  z-index: 1; }
+
+.bg-light {
+  background-color: #4b380e !important; }
+
+.navbar-brand {
+  color: #fad99d !important; }
+
+.nav-link {
+  color: #fad99d !important; }
+
+/* FIN MENÚ DE NAVEGACIÓN */
+.textoH1 {
+  background-color: #b37211c0;
+  text-align: center;
+  line-height: 2;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 160%;
+  border-bottom: #000 3px solid; }
+
+@media screen and (min-width: 768px) {
+  .textoH1
+img {
+    max-width: 12%;
+    max-height: 12%;
+    margin-top: 1.5%;
+    cursor: pointer; } }
+
+@media screen and (max-width: 768px) {
+  .textoH1
+img {
+    max-width: 25%;
+    max-height: 12%;
+    margin-top: 1.5%;
+    cursor: pointer; } }
+
+.footerSitio {
+  background-color: #755815;
+  margin: 0%;
+  margin-top: 0.5%;
+  padding: 0%;
+  border-top: #000 3px solid;
+  border-bottom: #000 3px solid;
+  grid-area: footer; }
+  .footerSitio .footerSitio_parrafo {
+    background-color: #755815;
+    margin: 0,5%;
+    margin-bottom: 0%;
+    padding: 0.25%;
+    height: 1%;
+    text-align: center;
+    font-size: 80%;
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: bold;
+    font-style: italic;
+    color: #000; }
+
+.bootstrapRepair {
+  color: #000;
+  font-weight: bold; }
+
+.bootstrapR2 {
+  color: #fad99d;
+  font-size: 140%; }
+
+/* SECCIÓN INDEX-HOME */
+/* SECCIÓN INDEX-HOME */
+@media screen and (max-width: 768px) {
+  #grillaIndex {
+    display: grid;
+    grid-template-areas: "titulo" "foto2" "article" "foto" "mapa" "article2" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 7, 1fr;
+    grid-gap: 1%; } }
+
+@media screen and (min-width: 768px) {
+  #grillaIndex {
+    display: grid;
+    grid-template-areas: "titulo titulo titulo" "article foto2 mapa" "article foto mapa" "article article2 article2" "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 2fr 2fr 2fr 0fr;
+    grid-gap: 1%; } }
+
+@media screen and (max-width: 992px) {
+  .primerH2index {
+    display: block;
+    font-size: 120%;
+    opacity: 0.85;
+    grid-area: titulo;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+@media screen and (min-width: 992px) {
+  .primerH2index {
+    display: flex;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+    font-size: 160%;
+    grid-area: titulo;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+.sectionPrimerTextoIndex {
+  display: block;
+  margin: 2.5%;
+  padding: 3%;
+  padding-bottom: 8%;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  grid-area: article; }
+  .sectionPrimerTextoIndex .sectionPrimerTextoIndex_texto {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 120%;
+    color: black;
+    font-weight: bold; }
+  .sectionPrimerTextoIndex p {
+    color: #fad99d; }
+
+.imgCentrada {
+  display: flex;
+  margin: 2.5%;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 15px 15px 15px black;
+  background-color: #755815;
+  opacity: 0.85;
+  grid-area: foto; }
+  .imgCentrada img {
+    max-width: 100%;
+    max-height: fit-content;
+    flex-wrap: wrap; }
+
+.imgCentrada2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5%;
+  padding: 2%;
+  grid-area: foto2; }
+  .imgCentrada2 img {
+    flex-wrap: wrap;
+    max-width: 90%; }
+
+.textoAdicional {
+  display: block;
+  margin: 1.5%;
+  padding: 2%;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  grid-area: article2; }
+  .textoAdicional .textoAdicional_texto {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 120%;
+    color: black;
+    font-weight: bold; }
+  .textoAdicional p {
+    color: #fad99d; }
+
+.mapaIndex {
+  display: flex;
+  margin: 2.5%;
+  padding: 2%;
+  text-align: center;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  font-family: 'Fredericka the Great', cursive;
+  grid-area: mapa; }
+  .mapaIndex iframe {
+    max-width: 93%;
+    height: 82%; }
+
+/* SECCIÓN PRODUCTOS - TIENDA ONLINE */
+/* SECCIÓN PRODUCTOS - TIENDA ONLINE */
+@media screen and (max-width: 768px) {
+  #grillaProductos {
+    display: grid;
+    grid-template-areas: "tituloP" "textoP" "producto1" "producto2" "producto3" "producto4" "footer";
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr, 1fr, 3fr, 3fr, 3fr, 3fr, 0fr;
+    grid-gap: 1%;
+    margin-bottom: 10%; } }
+
+@media screen and (min-width: 768px) {
+  #grillaProductos {
+    display: grid;
+    grid-template-areas: "tituloP tituloP" "textoP textoP" "producto1 producto2" "producto3 producto4" "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, 3fr, 3fr, 0fr;
+    grid-gap: 1%;
+    margin-bottom: 2.5%; } }
+
+.b_h1Productos {
+  background-color: #5c2d0ec0; }
+
+@media screen and (max-width: 992px) {
+  .primerH2productos {
+    display: block;
+    font-size: 120%;
+    opacity: 0.85;
+    grid-area: tituloP;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+@media screen and (min-width: 992px) {
+  .primerH2productos {
+    display: flex;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+    font-size: 160%;
+    grid-area: tituloP;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+.sectionPrimerTextoProductos {
+  display: block;
+  margin: 2.5%;
+  padding: 1.25%;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  grid-area: textoP; }
+  .sectionPrimerTextoProductos .sectionPrimerTextoProductos_texto {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 120%; }
+  .sectionPrimerTextoProductos p {
+    color: #fad99d; }
+
+.formatoProductos {
+  display: flex;
+  margin: 2.5%;
+  padding: 1.25%;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  border: 3px black solid; }
+  .formatoProductos h4 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 120%; }
+  .formatoProductos p {
+    color: black;
+    font-size: 100%;
+    font-weight: bolder; }
+  .formatoProductos small {
+    color: #fad99d;
+    font-size: 90%; }
+  .formatoProductos img {
+    max-width: 50%;
+    max-height: fit-content;
+    flex-wrap: wrap; }
+
+.producto1 {
+  grid-area: producto1;
+  display: grid;
+  grid-template-areas: "img1 titulo1" "img1 text1" "img1 precio1" "img1 boton1";
+  grid-template-columns: repeat(1fr, 2fr);
+  grid-template-rows: 3, 1fr;
+  grid-gap: 1%; }
+  .producto1 img {
+    grid-area: img1;
+    max-width: 100%;
+    align-self: center; }
+  .producto1 h4 {
+    grid-area: titulo1;
+    padding: 2%; }
+  .producto1 small {
+    grid-area: text1;
+    padding: 2%; }
+  .producto1 p {
+    grid-area: precio1;
+    text-align: center; }
+  .producto1 button {
+    grid-area: boton1;
+    align-self: center;
+    border: #000 2px solid;
+    color: #fad99d;
+    font-size: 90%;
+    margin-bottom: 1.25%; }
+
+@media screen and (min-width: 768px) {
+  .producto1 img:hover {
+    transform: scale(1.15); } }
+
+.producto2 {
+  grid-area: producto2;
+  display: grid;
+  grid-template-areas: "img2 titulo2" "img2 text2" "img2 precio2" "img2 boton2";
+  grid-template-columns: repeat(1fr, 2fr);
+  grid-template-rows: 3, 1fr;
+  grid-gap: 1%; }
+  .producto2 img {
+    grid-area: img2;
+    max-width: 100%;
+    align-self: center; }
+  .producto2 h4 {
+    grid-area: titulo2;
+    padding: 2%; }
+  .producto2 small {
+    grid-area: text2;
+    padding: 2%; }
+  .producto2 p {
+    grid-area: precio2;
+    text-align: center; }
+  .producto2 button {
+    grid-area: boton2;
+    align-self: center;
+    border: #000 2px solid;
+    color: #fad99d;
+    font-size: 90%;
+    margin-bottom: 1.25%; }
+
+@media screen and (min-width: 768px) {
+  .producto2 img:hover {
+    transform: scale(1.15); } }
+
+.producto3 {
+  grid-area: producto3;
+  display: grid;
+  grid-template-areas: "img3 titulo3" "img3 text3" "img3 precio3" "img3 boton3";
+  grid-template-columns: repeat(1fr, 2fr);
+  grid-template-rows: 3, 1fr;
+  grid-gap: 1%; }
+  .producto3 img {
+    grid-area: img3;
+    max-width: 100%;
+    align-self: center; }
+  .producto3 h4 {
+    grid-area: titulo3;
+    padding: 2%; }
+  .producto3 small {
+    grid-area: text3;
+    padding: 2%; }
+  .producto3 p {
+    grid-area: precio3;
+    text-align: center; }
+  .producto3 button {
+    grid-area: boton3;
+    align-self: center;
+    border: #000 2px solid;
+    color: #fad99d;
+    font-size: 90%;
+    margin-bottom: 1.25%; }
+
+@media screen and (min-width: 768px) {
+  .producto3 img:hover {
+    transform: scale(1.15); } }
+
+.producto4 {
+  grid-area: producto4;
+  display: grid;
+  grid-template-areas: "img4 titulo4" "img4 text4" "img4 precio4" "img4 boton4";
+  grid-template-columns: repeat(1fr, 2fr);
+  grid-template-rows: 3, 1fr;
+  grid-gap: 1%; }
+  .producto4 img {
+    grid-area: img4;
+    max-width: 100%;
+    align-self: center; }
+  .producto4 h4 {
+    grid-area: titulo4;
+    padding: 2%; }
+  .producto4 small {
+    grid-area: text4;
+    padding: 2%; }
+  .producto4 p {
+    grid-area: precio4;
+    text-align: center; }
+  .producto4 button {
+    grid-area: boton4;
+    align-self: center;
+    border: #000 2px solid;
+    color: #fad99d;
+    font-size: 90%;
+    margin-bottom: 1.25%; }
+
+@media screen and (min-width: 768px) {
+  .producto4 img:hover {
+    transform: scale(1.15); } }
+
+/* SECCIÓN PROVEEDORES */
+/* SECCIÓN PROVEEDORES */
+#grillaProveedores {
+  display: grid;
+  grid-template-areas: "titulo" "article" "carousel" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 4, 1fr;
+  grid-gap: 1%; }
+
+.b_h1Proveedores {
+  background-color: #1f5a5ec0; }
+
+@media screen and (max-width: 992px) {
+  .primerH2proveedores {
+    display: block;
+    font-size: 120%;
+    opacity: 0.85;
+    grid-area: titulo;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+@media screen and (min-width: 992px) {
+  .primerH2proveedores {
+    display: flex;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+    font-size: 160%;
+    grid-area: titulo;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+.linkContacto {
+  color: black;
+  font-weight: bold; }
+
+.sectionPrimerTextoProveedores {
+  display: block;
+  margin: 2.5%;
+  padding: 2%;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  grid-area: article; }
+  .sectionPrimerTextoProveedores .sectionPrimerTextoProveedores_texto {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 120%;
+    color: black;
+    font-weight: bold; }
+  .sectionPrimerTextoProveedores p {
+    color: #fad99d; }
+
+.carouselProveedores {
+  grid-area: carousel;
+  margin: 5%; }
+
+@media screen and (min-width: 768px) {
+  .carousel-item {
+    margin-left: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 40%; } }
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    margin-left: 10.5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 80%; } }
+
+/* SECCIÓN SUSTENTABILIDAD */
+/* SECCIÓN SUSTENTABILIDAD */
+#grillaSustentabilidad {
+  display: grid;
+  grid-template-areas: "titulo" "article" "carousel" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 4, 1fr;
+  grid-gap: 1%; }
+
+.b_h1Sustentabilidad {
+  background-color: #28531ec0; }
+
+@media screen and (max-width: 992px) {
+  .primerH2Sustentabilidad {
+    display: block;
+    font-size: 120%;
+    opacity: 0.85;
+    grid-area: titulo;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+@media screen and (min-width: 992px) {
+  .primerH2Sustentabilidad {
+    display: flex;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+    font-size: 160%;
+    grid-area: titulo;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+.sectionPrimerTextoSustentabilidad {
+  display: block;
+  margin: 5%;
+  padding: 2%;
+  background-color: #755815;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 125%;
+  color: black;
+  box-shadow: 15px 15px 15px black;
+  opacity: 0.85;
+  grid-area: article; }
+  .sectionPrimerTextoSustentabilidad .sectionPrimerTextoSustentabilidad_texto {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 120%;
+    color: black;
+    font-weight: bold; }
+  .sectionPrimerTextoSustentabilidad p {
+    color: #fad99d; }
+
+.carouselSustentabilidad {
+  grid-area: carousel;
+  margin: 5%; }
+
+@media screen and (min-width: 768px) {
+  .carousel-item {
+    margin-left: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 40%; } }
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    margin-left: 10.5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 80%; } }
+
+/* SECCIÓN CONTACTO*/
+/* SECCIÓN CONTACTO*/
+@media screen and (max-width: 768px) {
+  #grillaContacto {
+    display: grid;
+    grid-template-areas: "tituloC" "redes" "fieldSet" "footer";
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 0fr;
+    grid-gap: 1%; } }
+
+@media screen and (min-width: 768px) {
+  #grillaContacto {
+    display: grid;
+    grid-template-areas: "tituloC tituloC" "fieldSet redes" "fieldSet redes" "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 0fr;
+    grid-gap: 1%; } }
+
+.b_h1Contacto {
+  background-color: #61200fc0; }
+
+@media screen and (max-width: 992px) {
+  .primerH2contacto {
+    display: block;
+    font-size: 120%;
+    opacity: 0.85;
+    grid-area: tituloC;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+@media screen and (min-width: 992px) {
+  .primerH2contacto {
+    display: flex;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+    font-size: 160%;
+    grid-area: tituloC;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #755815;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: #fad99d; } }
+
+.textoForm {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 100%;
+  font-weight: bold;
+  padding-top: 3%; }
+
+.fieldsetContacto {
+  display: block;
+  width: fit-content;
+  background-color: #b37211c0;
+  font-size: 125%;
+  grid-area: fieldSet;
+  box-shadow: 15px 15px 15px black;
+  margin: 2.5%;
+  padding: 1%;
+  margin-left: 17%; }
+  .fieldsetContacto legend {
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: bold; }
+
+.formCenter {
+  display: flex;
+  padding: 2.5%;
+  justify-content: center; }
+
+@media screen and (min-width: 768px) {
+  .icons {
+    background-color: #b37211c0;
+    box-shadow: 15px 15px 15px black;
+    margin: 2.5%;
+    padding: 1%;
+    margin-right: 17%;
+    grid-area: redes;
+    display: grid;
+    grid-template-areas: "titulo" "mail" "warap" "insta";
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    grid-gap: 1%; } }
+
+@media screen and (max-width: 768px) {
+  .icons {
+    background-color: #b37211c0;
+    box-shadow: 15px 15px 15px black;
+    margin: 2.5%;
+    padding: 1%;
+    margin-right: 23.5%;
+    margin-left: 17%;
+    grid-area: redes;
+    display: grid;
+    grid-template-areas: "titulo" "mail" "warap" "insta";
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    grid-gap: 1%; } }
+
+.textoIcons {
+  display: flex;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 160%;
+  font-weight: bold;
+  justify-self: center;
+  grid-area: titulo; }
+
+.iconGmail {
+  display: flex;
+  justify-self: center;
+  font-size: 10rem;
+  grid-area: mail;
+  margin-bottom: 7%; }
+
+.iconWhatsapp {
+  display: flex;
+  justify-self: center;
+  font-size: 10rem;
+  grid-area: warap;
+  margin-bottom: 7%; }
+
+.iconInstagram {
+  display: flex;
+  justify-self: center;
+  font-size: 10rem;
+  grid-area: insta;
+  margin-bottom: 7%; }

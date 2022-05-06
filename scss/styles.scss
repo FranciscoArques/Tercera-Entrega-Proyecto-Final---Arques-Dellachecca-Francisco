@@ -1,0 +1,144 @@
+/* Importamos en primera instancia el archivo
+con las variables, mixins y maps. */ 
+
+@import "vars";
+
+/* GENERAL (APLICA PARA TODO EL SITIO) */
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@media screen and (min-width: 577px){
+    .imagenDeFondo {
+        background-image: url(../img/imgDeFondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 577px){
+    .imagenDeFondo {
+        background-image: url(../img/imgDeFondoResponsive.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        background-attachment: fixed;
+    }
+}
+
+/* MENÚ DE NAVEGACIÓN (con modificaciones para que funcione con bootstrap)*/
+
+.newNav {
+    display: flex;
+    display: block;
+    position: sticky;
+    top: 0%;
+    border-bottom: #000 3px solid;
+    z-index: 1;
+}
+
+.bg-light {
+    background-color: #4b380e !important;
+}
+
+.navbar-brand {
+    color: $color !important;
+}
+
+.nav-link {
+    color: $color !important;
+}
+
+/* FIN MENÚ DE NAVEGACIÓN */
+
+.textoH1{
+    background-color: #b37211c0;
+    text-align: center;
+    line-height: 2;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: map-get($fontSizes, l);
+    border-bottom: #000 3px solid;
+}
+
+@media screen and (min-width: 768px){
+    .textoH1
+        img {
+            max-width: 12%;
+            max-height: 12%;
+            margin-top: 1.5%;
+            cursor: pointer;
+        }
+}
+
+@media screen and (max-width: 768px){
+    .textoH1
+        img {
+            max-width: 25%;
+            max-height: 12%;
+            margin-top: 1.5%;
+            cursor: pointer;
+        }
+}
+
+.footerSitio {
+    
+    background-color: $background-color;
+    margin: 0%;
+    margin-top: 0.5%;
+    padding: 0%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    grid-area: footer;
+    
+    .footerSitio_parrafo {
+        background-color: $background-color;
+        margin: 0,5%;
+        margin-bottom: 0%;
+        padding: 0.25%;
+        height: 1%;
+        text-align: center;
+        font-size: 80%;
+        font-family: 'Anonymous Pro', monospace;
+        font-weight: bold;
+        font-style: italic;
+        color: #000;
+    }
+}
+
+.bootstrapRepair {
+    color: #000;
+    font-weight: bold;
+}
+
+.bootstrapR2 {
+    color: $color;
+    font-size: map-get($fontSizes, m);
+}
+
+/* SECCIÓN INDEX-HOME */
+
+@import "index";
+
+/* SECCIÓN PRODUCTOS - TIENDA ONLINE */
+
+@import "productos";
+
+/* SECCIÓN PROVEEDORES */
+
+@import "proveedores";
+
+/* SECCIÓN SUSTENTABILIDAD */ 
+
+@import "sustentabilidad";
+
+/* SECCIÓN CONTACTO*/
+
+@import "contacto";

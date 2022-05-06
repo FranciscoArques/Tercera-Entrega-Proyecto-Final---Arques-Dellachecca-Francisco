@@ -1,0 +1,47 @@
+$color: rgb(250, 217, 157);
+$colorDark: rgb(0, 0, 0);
+$background-color: #755815;
+
+$fontSizes: (
+    petit: 90%,
+    xxs: 100%,
+    xs: 120%,
+    s: 125%,
+    m: 140%,
+    l: 160%, 
+);
+
+@mixin botonProductos {
+    align-self: center;
+    border: #000 2px solid;
+    color: $color;
+    font-size: 90%;
+    margin-bottom: 1.25%;
+}
+
+@mixin primerH2 {
+    font-family: 'Fredericka the Great', cursive;
+    background-color: $background-color;
+    background-image: url(../img/cafefondo.png);
+    background-size: contain;
+    margin: 2% 0%;
+    padding: 2%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    color: $color;
+}
+
+@mixin boxModeling ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin decoradoBasico {
+    background-color: $background-color;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: map-get($fontSizes, s);
+    color: $colorDark;
+    box-shadow: 15px 15px 15px black;
+    opacity: 0.85;
+}
+

@@ -1,0 +1,85 @@
+/* SECCIÓN PROVEEDORES */
+
+#grillaProveedores {
+    display: grid;
+    grid-template-areas:"titulo"
+                        "article"
+                        "carousel"
+                        "footer";
+    grid-template-columns: (1fr);
+    grid-template-rows: (4, 1fr);
+    grid-gap: 1%;
+}
+
+.b_h1Proveedores {
+    background-color: #1f5a5ec0;
+}
+
+@media screen and (max-width: 992px){
+    .primerH2proveedores {
+        display: block;
+        font-size: map-get($fontSizes, xs);
+        opacity: 0.85;
+        grid-area: titulo;
+        @include primerH2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .primerH2proveedores {
+        display: flex;
+        position: sticky;
+        top: 7%;
+        z-index: 1;
+        font-size: map-get($fontSizes, $key: l);
+        grid-area: titulo;
+        @include primerH2;
+    }
+}
+
+.linkContacto {
+    color: $colorDark;
+    font-weight: bold;
+}
+
+.sectionPrimerTextoProveedores {
+    display: block;
+    @include boxModeling (2.5%, 2%);
+    @include decoradoBasico;
+    grid-area: article;
+
+    .sectionPrimerTextoProveedores_texto {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: map-get($fontSizes, xs);
+        color: $colorDark;
+        font-weight: bold;
+    }
+
+    p {
+        color: $color;
+    }
+
+}
+
+.carouselProveedores {
+    grid-area: carousel;
+    margin: 5%;
+}
+
+@media screen and (min-width: 768px){
+    .carousel-item {
+        margin-left: 30%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        max-width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .carousel-item {
+        margin-left: 10.5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,156 @@
+/* SECCIÓN CONTACTO*/
+
+@media screen and (max-width: 768px) {
+    #grillaContacto {
+        display: grid;
+        grid-template-areas:"tituloC"
+                            "redes"
+                            "fieldSet"
+                            "footer";
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: (1fr, 1fr, 1fr, 0fr);
+        grid-gap: 1%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #grillaContacto {
+        display: grid;
+        grid-template-areas:"tituloC tituloC"
+                            "fieldSet redes"
+                            "fieldSet redes"
+                            "footer footer";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: (1fr, 1fr, 1fr, 0fr);
+        grid-gap: 1%;
+    }
+}
+
+.b_h1Contacto {
+    background-color: #61200fc0;
+}
+
+@media screen and (max-width: 992px){
+    .primerH2contacto {
+        display: block;
+        font-size: map-get($fontSizes, xs);
+        opacity: 0.85;
+        grid-area: tituloC;
+        @include primerH2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .primerH2contacto {
+        display: flex;
+        position: sticky;
+        top: 7%;
+        z-index: 1;
+        font-size: map-get($fontSizes, $key: l);
+        grid-area: tituloC;
+        @include primerH2;
+    }
+}
+
+.textoForm {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: map-get($fontSizes, xxs);
+    font-weight: bold;
+    padding-top: 3%;
+}
+
+.fieldsetContacto {
+    display: block;
+    width: fit-content;
+    background-color: #b37211c0;;
+    font-size: map-get($fontSizes, s);
+    grid-area: fieldSet;
+    box-shadow: 15px 15px 15px black;
+    @include boxModeling (2.5%, 1%);
+    margin-left: 17%;
+
+    legend {
+        background-color: rgba(255, 255, 255, 0);
+        font-family: 'Fredericka the Great', cursive;
+        font-weight: bold;
+    }
+
+}
+
+.formCenter {
+    display: flex;
+    padding: 2.5%;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px){
+    .icons {
+        background-color: #b37211c0;;
+        box-shadow: 15px 15px 15px black;
+        @include boxModeling (2.5%, 1%);
+        margin-right: 17%;
+        grid-area: redes;
+
+        display: grid;
+        grid-template-areas:"titulo"
+                            "mail"
+                            "warap"
+                            "insta";
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: (1fr, 1fr, 1fr, 1fr);
+        grid-gap: 1%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .icons {
+        background-color: #b37211c0;;
+        box-shadow: 15px 15px 15px black;
+        @include boxModeling (2.5%, 1%);
+        margin-right: 23.5%;
+        margin-left: 17%;
+        grid-area: redes;
+
+        display: grid;
+        grid-template-areas:"titulo"
+                            "mail"
+                            "warap"
+                            "insta";
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: (1fr, 1fr, 1fr, 1fr);
+        grid-gap: 1%;
+    }
+}
+
+.textoIcons {
+    display: flex;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: map-get($fontSizes, l);
+    font-weight: bold;
+    justify-self: center;
+    grid-area: titulo;
+}
+
+.iconGmail {
+    display: flex;
+    justify-self: center;
+    font-size: 10rem;
+    grid-area: mail;
+    margin-bottom: 7%;
+}
+
+.iconWhatsapp {
+    display: flex;
+    justify-self: center;
+    font-size: 10rem;
+    grid-area: warap;
+    margin-bottom: 7%;
+}
+
+.iconInstagram {
+    display: flex;
+    justify-self: center;
+    font-size: 10rem;
+    grid-area: insta;
+    margin-bottom: 7%;
+}
