@@ -140,8 +140,16 @@
     button {
         grid-area: boton1;
         @include botonProductos;
+        padding-bottom: 5%;
     }
 
+}
+
+@media screen and (max-width: 768px){
+    .btn {
+        margin-top: 10% !important;
+        margin-bottom: 23% !important;
+    }
 }
 
 @media screen and (min-width: 768px) {

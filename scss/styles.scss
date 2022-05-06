@@ -25,6 +25,7 @@ con las variables, mixins y maps. */
     .imagenDeFondo {
         background-image: url(../img/imgDeFondoResponsive.jpg);
         background-repeat: no-repeat;
+        background-size: contain;
         background-size: cover;
         margin-bottom: 0%;
         padding-bottom: 0%;

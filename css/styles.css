@@ -19,6 +19,7 @@ con las variables, mixins y maps. */
   .imagenDeFondo {
     background-image: url(../img/imgDeFondoResponsive.jpg);
     background-repeat: no-repeat;
+    background-size: contain;
     background-size: cover;
     margin-bottom: 0%;
     padding-bottom: 0%;
@@ -358,7 +359,13 @@ img {
     border: #000 2px solid;
     color: #fad99d;
     font-size: 90%;
-    margin-bottom: 1.25%; }
+    margin-bottom: 1.25%;
+    padding-bottom: 5%; }
+
+@media screen and (max-width: 768px) {
+  .btn {
+    margin-top: 10% !important;
+    margin-bottom: 23% !important; } }
 
 @media screen and (min-width: 768px) {
   .producto1 img:hover {
@@ -692,15 +699,15 @@ img {
   padding-top: 3%; }
 
 .fieldsetContacto {
-  display: block;
-  width: fit-content;
+  display: flex;
+  margin: 0%;
+  justify-self: center;
   background-color: #b37211c0;
   font-size: 125%;
   grid-area: fieldSet;
   box-shadow: 15px 15px 15px black;
   margin: 2.5%;
-  padding: 1%;
-  margin-left: 17%; }
+  padding: 1%; }
   .fieldsetContacto legend {
     background-color: rgba(255, 255, 255, 0);
     font-family: 'Fredericka the Great', cursive;

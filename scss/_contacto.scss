@@ -60,14 +60,14 @@
 }
 
 .fieldsetContacto {
-    display: block;
-    width: fit-content;
+    display: flex;
+    margin: 0%;
+    justify-self: center;
     background-color: #b37211c0;;
     font-size: map-get($fontSizes, s);
     grid-area: fieldSet;
     box-shadow: 15px 15px 15px black;
     @include boxModeling (2.5%, 1%);
-    margin-left: 17%;
 
     legend {
         background-color: rgba(255, 255, 255, 0);
